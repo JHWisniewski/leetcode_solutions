@@ -17,7 +17,7 @@ class Solution(object):
         j = len(nums) - 1
         
         #Pre-allocate ans array space and set pos index for backwards interation
-        #Avoids needing to reverse array and just insert directly into ans
+        #Avoids needing to reverse appended array
         ans = [0] * len(nums)
         pos = len(nums) - 1
 
