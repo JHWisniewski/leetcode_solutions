@@ -15,25 +15,19 @@ class Solution(object):
         #Two pointers for sorting into ans
         i = 0
         j = len(nums) - 1
-        ans = []
+        
+        #Pre-allocate ans array space and set pos index for backwards interation
+        #Avoids amortized list append O(1)
+        ans = [0] * len(nums)
+        pos = len(nums) - 1
 
         while i <= j:
             if nums[i] >= nums[j]:
-                ans.append(nums[i])
+                ans[pos] = nums[i]
                 i += 1
             else:
-                ans.append(nums[j])
+                ans[pos] = nums[j]
                 j -= 1
-                
-        #Two pointers for reversing ans array
-        i = 0
-        j = len(ans) - 1
-        
-        while i < j:
-            temp = ans[i]
-            ans[i] = ans[j]
-            ans[j] = temp
-            i += 1
-            j -= 1
+            pos -= 1
                 
         return ans
