@@ -31,3 +31,15 @@ class Solution(object):
             pos -= 1
                 
         return ans
+
+#Setup of solution with LeetCode example input
+solution = Solution()
+
+input1 = [-4,-1,0,3,10]
+input2 = [-7,-3,2,3,11]
+
+print(f"Input: nums = {input1}")
+print(f"Output: " + str(solution.sortedSquares(input1)))
+print()
+print(f"Input: nums = {input2}")
+print(f"Output: " + str(solution.sortedSquares(input2)))

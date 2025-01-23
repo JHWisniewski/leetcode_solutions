@@ -15,3 +15,17 @@ class Solution(object):
                 s[j] = temp
             i += 1
             j -= 1
+
+        return s
+
+#Setup of solution with LeetCode example input
+solution = Solution()
+
+input1 = ["h","e","l","l","o"]
+input2 = ["H","a","n","n","a","h"]
+
+print(f"Input: s = {input1}")
+print(f"Output: " + str(solution.reverseString(input1)))
+print()
+print(f"Input: s = {input2}")
+print(f"Output: " + str(solution.reverseString(input2)))
