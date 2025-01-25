@@ -13,8 +13,8 @@ class Solution(object):
         :rtype: List[int]
         """
         prefix = [nums[0]]
-        ans = []
         denom = 2 * k + 1
+        ans = []
 
         #Build prefix
         for i in range(1, len(nums)):
@@ -24,12 +24,10 @@ class Solution(object):
         for i in range(len(nums)):
             left = i - k
             right = i + k
-
             if left < 0 or right >= len(nums):
                 ans.append(-1)
             else:
-                #Account for current left element in step-by-step sum
-                ans.append(prefix[right] - prefix[left] + nums[left] // denom)
+                ans.append((prefix[right] - prefix[left] + nums[left]) // denom)
 
         return ans
     
