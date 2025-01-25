@@ -1,4 +1,10 @@
 class Solution(object):
+    """
+    Constraints:
+    1 <= s.length <= 10^5
+    s[i] is a printable ascii character.
+    """
+    
     def reverseString(self, s):
         """
         :type s: List[str]
