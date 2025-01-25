@@ -29,12 +29,12 @@ class Solution(object):
 solution = Solution()
 
 input1 = [1,1,1,0,0,0,1,1,1,1,0]
-max_flips1 = 2
+k1 = 2
 input2 = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]
-max_flips2 = 3
+k2 = 3
 
-print(f"Input: nums = {input1}")
-print(f"Output: " + str(solution.longestOnes(input1, max_flips1)))
+print(f"Input: nums = {input1}, k = {k1}")
+print(f"Output: " + str(solution.longestOnes(input1, k1)))
 print()
-print(f"Input: nums = {input2}")
-print(f"Output: " + str(solution.longestOnes(input2, max_flips2)))
+print(f"Input: nums = {input2}, k = {k2}")
+print(f"Output: " + str(solution.longestOnes(input2, k2)))
