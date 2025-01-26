@@ -39,14 +39,23 @@ class Solution(object):
                 
         return ans
 
-#Setup of solution with LeetCode example input
-solution = Solution()
+def main():
+    #Setup of solution with LeetCode example input
+    solution = Solution()
+    
+    with open('./Problem Inputs/2_Input.md') as f:
+        lines = f.readlines()
 
-input1 = [-4,-1,0,3,10]
-input2 = [-7,-3,2,3,11]
+    for line in lines:
+        line = line.strip()
 
-print(f"Input: nums = {input1}")
-print(f"Output: " + str(solution.sortedSquares(input1)))
-print()
-print(f"Input: nums = {input2}")
-print(f"Output: " + str(solution.sortedSquares(input2)))
+        nums = eval(line)
+        output = solution.sortedSquares(nums)
+        
+        #nums is changed in place for squared values, needing line here
+        print(f"Input: s = {line}")
+
+        print(f"Output: {output}\n")
+
+if __name__ == "__main__":
+    main()

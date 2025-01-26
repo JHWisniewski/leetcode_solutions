@@ -28,18 +28,23 @@ class Solution(object):
             
         return ans
 
-#Setup of solution with LeetCode example input
-solution = Solution()
+def main():
+    #Setup of solution with LeetCode example input
+    solution = Solution()
+    
+    with open('./Problem Inputs/3_Input.md') as f:
+        lines = f.readlines()
 
-input1 = [1,12,-5,-6,50,3]
-window_len1 = 4
-input2 = [5]
-window_len2 = 1
-ans1 = solution.findMaxAverage(input1, window_len1)
-ans2 = solution.findMaxAverage(input2, window_len2)
+    for line in lines:
+        line = line.strip()
+        input_nums, input_k = line.split(", ")  # Split by the delimiter ", "
 
-print(f"Input: nums = {input1}, k = {window_len1}")
-print(f"Output = {ans1:.5f}")
-print()
-print(f"Input: nums = {input2}, k = {window_len2}")
-print(f"Output = {ans2:.5f}")
+        nums = eval(input_nums)
+        k = int(input_k)
+        output = solution.findMaxAverage(nums, k)
+        
+        print(f"Input: nums = {nums}, k = {k}")
+        print(f"Output: {output:.5f}\n")
+
+if __name__ == "__main__":
+    main()

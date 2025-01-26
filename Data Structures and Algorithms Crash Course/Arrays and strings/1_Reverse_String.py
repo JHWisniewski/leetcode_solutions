@@ -24,14 +24,23 @@ class Solution(object):
 
         return s
 
-#Setup of solution with LeetCode example input
-solution = Solution()
+def main():
+    #Setup of solution with LeetCode example input
+    solution = Solution()
+    
+    with open('./Problem Inputs/1_Input.md') as f:
+        lines = f.readlines()
 
-input1 = ["h","e","l","l","o"]
-input2 = ["H","a","n","n","a","h"]
+    for line in lines:
+        line = line.strip()
 
-print(f"Input: s = {input1}")
-print(f"Output: " + str(solution.reverseString(input1)))
-print()
-print(f"Input: s = {input2}")
-print(f"Output: " + str(solution.reverseString(input2)))
+        s = eval(line)
+        output = solution.reverseString(s)
+        
+        #s is changed in place, need to use original input line
+        print(f"Input: s = {line}")
+
+        print(f"Output: {output}\n")  
+
+if __name__ == "__main__":
+    main()

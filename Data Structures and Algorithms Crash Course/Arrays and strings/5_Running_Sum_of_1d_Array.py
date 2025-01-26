@@ -15,19 +15,22 @@ class Solution(object):
             prefix.append(nums[i] + prefix[-1])
             
         return prefix
+
+def main():
+    #Setup of solution with LeetCode example input
+    solution = Solution()
     
-#Setup of solution with LeetCode example input
-solution = Solution()
+    with open('./Problem Inputs/5_Input.md') as f:
+        lines = f.readlines()
 
-input1 = [1,2,3,4]
-input2 = [1,1,1,1,1]
-input3 = [3,1,2,10,1]
+    for line in lines:
+        line = line.strip()
 
-print(f"Input: nums = {input1}")
-print(f"Output: " + str(solution.runningSum(input1)))
-print()
-print(f"Input: nums = {input2}")
-print(f"Output: " + str(solution.runningSum(input2)))
-print()
-print(f"Input: nums = {input3}")
-print(f"Output: " + str(solution.runningSum(input3)))
+        nums = eval(line)
+        output = solution.runningSum(nums)
+        
+        print(f"Input: s = {nums}")
+        print(f"Output: {output}\n")  
+
+if __name__ == "__main__":
+    main()

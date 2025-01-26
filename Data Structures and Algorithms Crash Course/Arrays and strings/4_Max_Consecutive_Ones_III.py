@@ -26,15 +26,23 @@ class Solution(object):
             
         return ans
 
-solution = Solution()
+def main():
+    #Setup of solution with LeetCode example input
+    solution = Solution()
+    
+    with open('./Problem Inputs/4_Input.md') as f:
+        lines = f.readlines()
 
-input1 = [1,1,1,0,0,0,1,1,1,1,0]
-k1 = 2
-input2 = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]
-k2 = 3
+    for line in lines:
+        line = line.strip()
+        input_nums, input_k = line.split(", ")  # Split by the delimiter ", "
 
-print(f"Input: nums = {input1}, k = {k1}")
-print(f"Output: " + str(solution.longestOnes(input1, k1)))
-print()
-print(f"Input: nums = {input2}, k = {k2}")
-print(f"Output: " + str(solution.longestOnes(input2, k2)))
+        nums = eval(input_nums)
+        k = int(input_k)
+        output = solution.longestOnes(nums, k)
+        
+        print(f"Input: nums = {nums}, k = {k}")
+        print(f"Output: {output}\n")
+
+if __name__ == "__main__":
+    main()

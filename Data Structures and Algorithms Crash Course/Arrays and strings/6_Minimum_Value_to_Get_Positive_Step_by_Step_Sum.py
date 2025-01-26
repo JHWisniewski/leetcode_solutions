@@ -42,18 +42,21 @@ class Solution(object):
 
         return -startVal + 1
 
-#Setup of solution with LeetCode example input
-solution = Solution()
+def main():
+    #Setup of solution with LeetCode example input
+    solution = Solution()
+    
+    with open('./Problem Inputs/6_Input.md') as f:
+        lines = f.readlines()
 
-input1 = [-3,2,-3,4,2]
-input2 = [1,2]
-input3 = [1,-2,-3]
+    for line in lines:
+        line = line.strip()
 
-print(f"Input: nums = {input1}")
-print(f"Output: " + str(solution.minStartValue2(input1)))
-print()
-print(f"Input: nums = {input2}")
-print(f"Output: " + str(solution.minStartValue2(input2)))
-print()
-print(f"Input: nums = {input3}")
-print(f"Output: " + str(solution.minStartValue2(input3)))
+        nums = eval(line)
+        output = solution.minStartValue2(nums)
+        
+        print(f"Input: s = {nums}")
+        print(f"Output: {output}\n")  
+
+if __name__ == "__main__":
+    main()
