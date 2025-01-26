@@ -52,7 +52,7 @@ def main():
         nums = eval(line)
         output = solution.sortedSquares(nums)
         
-        #nums is changed in place for squared values, needing line here
+        #nums is changed in place, line itself used
         print(f"Input: s = {line}")
 
         print(f"Output: {output}\n")

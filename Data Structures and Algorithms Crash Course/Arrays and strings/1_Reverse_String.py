@@ -37,7 +37,7 @@ def main():
         s = eval(line)
         output = solution.reverseString(s)
         
-        #s is changed in place, need to use original input line
+        #s is changed in place, line itself used
         print(f"Input: s = {line}")
 
         print(f"Output: {output}\n")  
