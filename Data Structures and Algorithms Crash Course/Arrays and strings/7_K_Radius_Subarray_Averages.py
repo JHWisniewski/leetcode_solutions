@@ -1,11 +1,11 @@
-import os
+import json
 
 class Solution(object):
     """
     Constraints:
-    n == nums.length
-    1 <= n <= 10^5
-    0 <= nums[i], k <= 10^5
+        n == nums.length
+        1 <= n <= 10^5
+        0 <= nums[i], k <= 10^5
     """
 
     def getAverages(self, nums, k):
@@ -72,36 +72,13 @@ def main():
     #Setup of solution with LeetCode example input
     solution = Solution()
     
-    with open('./Problem Inputs/7_Input.md') as f:
-        lines = f.readlines()
+    with open('./Problem Inputs/7_Input.json') as f:
+        JSON = json.loads(f.read())
 
-    for line in lines:
-        line = line.strip()
-        input_nums, input_k = line.split(", ")  # Split by the delimiter ", "
-
-        nums = eval(input_nums)
-        k = int(input_k)
-        output = solution.getAverages2(nums, k)
-        
-        print(f"Input: nums = {nums}, k = {k}")
-        print(f"Output: {output}\n")     
+    for object in JSON:
+        print(f"Input: nums = {object['nums']}, k = {object['k']}")
+        output = solution.getAverages2(object['nums'], object['k'])
+        print(f"Output: {output}\n")
 
 if __name__ == "__main__":
     main()
-
-
-""" input1 = [7,4,3,9,1,8,5,2,6]
-k1 = 3
-input2 = [100000]
-k2 = 0
-input3 = [8]
-k3 = 100000
-
-print(f"Input: nums = {input1}, k = {k1}")
-print(f"Output: " + str(solution.getAverages2(input1, k1)))
-print()
-print(f"Input: nums = {input2}, k = {k2}")
-print(f"Output: " + str(solution.getAverages2(input2, k2)))
-print()
-print(f"Input: nums = {input3}, k = {k3}")
-print(f"Output: " + str(solution.getAverages2(input3, k3))) """

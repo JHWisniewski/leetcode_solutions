@@ -1,8 +1,10 @@
+import json
+
 class Solution(object):
     """
     Constraints:
-    1 <= nums.length <= 1000
-    -10^6 <= nums[i] <= 10^6
+        1 <= nums.length <= 1000
+        -10^6 <= nums[i] <= 10^6
     """
     
     def runningSum(self, nums):
@@ -20,17 +22,13 @@ def main():
     #Setup of solution with LeetCode example input
     solution = Solution()
     
-    with open('./Problem Inputs/5_Input.md') as f:
-        lines = f.readlines()
+    with open('./Problem Inputs/5_Input.json') as f:
+        JSON = json.loads(f.read())
 
-    for line in lines:
-        line = line.strip()
-
-        nums = eval(line)
-        output = solution.runningSum(nums)
-        
-        print(f"Input: s = {nums}")
-        print(f"Output: {output}\n")  
+    for object in JSON:
+        print(f"Input: s = {object['nums']}")
+        output = solution.runningSum(object['nums'])
+        print(f"Output: {output}\n") 
 
 if __name__ == "__main__":
     main()

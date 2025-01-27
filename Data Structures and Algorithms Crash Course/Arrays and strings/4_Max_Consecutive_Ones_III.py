@@ -1,9 +1,11 @@
+import json
+
 class Solution(object):
     """
     Constraints:
-    1 <= nums.length <= 10^5
-    nums[i] is either 0 or 1.
-    0 <= k <= nums.length
+        1 <= nums.length <= 10^5
+        nums[i] is either 0 or 1.
+        0 <= k <= nums.length
     """
     def longestOnes(self, nums, k):
         """
@@ -30,18 +32,12 @@ def main():
     #Setup of solution with LeetCode example input
     solution = Solution()
     
-    with open('./Problem Inputs/4_Input.md') as f:
-        lines = f.readlines()
+    with open('./Problem Inputs/4_Input.json') as f:
+        JSON = json.loads(f.read())
 
-    for line in lines:
-        line = line.strip()
-        input_nums, input_k = line.split(", ")  # Split by the delimiter ", "
-
-        nums = eval(input_nums)
-        k = int(input_k)
-        output = solution.longestOnes(nums, k)
-        
-        print(f"Input: nums = {nums}, k = {k}")
+    for object in JSON:
+        print(f"Input: nums = {object['nums']}, k = {object['k']}")
+        output = solution.longestOnes(object['nums'], object['k'])
         print(f"Output: {output}\n")
 
 if __name__ == "__main__":

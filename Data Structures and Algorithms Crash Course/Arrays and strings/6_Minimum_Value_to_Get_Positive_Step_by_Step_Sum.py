@@ -1,8 +1,10 @@
+import json
+
 class Solution(object):
     """
     Constraints:
-    1 <= nums.length <= 100
-    -100 <= nums[i] <= 100
+        1 <= nums.length <= 100
+        -100 <= nums[i] <= 100
     """
 
     #Brute force, O(n^2)
@@ -46,17 +48,13 @@ def main():
     #Setup of solution with LeetCode example input
     solution = Solution()
     
-    with open('./Problem Inputs/6_Input.md') as f:
-        lines = f.readlines()
+    with open('./Problem Inputs/6_Input.json') as f:
+        JSON = json.loads(f.read())
 
-    for line in lines:
-        line = line.strip()
-
-        nums = eval(line)
-        output = solution.minStartValue2(nums)
-        
-        print(f"Input: s = {nums}")
-        print(f"Output: {output}\n")  
+    for object in JSON:
+        print(f"Input: nums = {object['nums']}")
+        output = solution.minStartValue2(object['nums'])
+        print(f"Output: {output}\n") 
 
 if __name__ == "__main__":
     main()

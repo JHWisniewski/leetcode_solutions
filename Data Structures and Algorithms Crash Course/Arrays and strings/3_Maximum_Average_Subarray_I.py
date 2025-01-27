@@ -1,9 +1,11 @@
+import json
+
 class Solution(object):
     """
     Constraints:
-    n == nums.length
-    1 <= k <= n <= 10^5
-    -10^4 <= nums[i] <= 10^4
+        n == nums.length
+        1 <= k <= n <= 10^5
+        -10^4 <= nums[i] <= 10^4
     """
     def findMaxAverage(self, nums, k):
         """
@@ -32,18 +34,12 @@ def main():
     #Setup of solution with LeetCode example input
     solution = Solution()
     
-    with open('./Problem Inputs/3_Input.md') as f:
-        lines = f.readlines()
+    with open('./Problem Inputs/3_Input.json') as f:
+        JSON = json.loads(f.read())
 
-    for line in lines:
-        line = line.strip()
-        input_nums, input_k = line.split(", ")  # Split by the delimiter ", "
-
-        nums = eval(input_nums)
-        k = int(input_k)
-        output = solution.findMaxAverage(nums, k)
-        
-        print(f"Input: nums = {nums}, k = {k}")
+    for object in JSON:
+        print(f"Input: nums = {object['nums']}, k = {object['k']}")
+        output = solution.findMaxAverage(object['nums'], object['k'])
         print(f"Output: {output:.5f}\n")
 
 if __name__ == "__main__":
