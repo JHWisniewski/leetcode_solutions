@@ -55,7 +55,6 @@ class Solution(object):
         ans = ''.join(string)
         
         return ans
-
         
 def main():
     #Setup of solution with LeetCode example input
