@@ -19,27 +19,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        left = 0
-        right = 1
-        curr = nums[left]
+        left = right = curr = 0
 
         #Set to minimum impossible value
         ans = len(nums) + 1
-
-        #If already at target
-        if curr >= target:
-            return 1
-        
-        #If right does not exist
-        if right >= len(nums):
-            return 0
         
         #Run through nums
         while right < len(nums):
-            #If target is seen outright
-            if nums[right] == target:
-                return 1
-            
             curr += nums[right]
 
             if curr < target:
