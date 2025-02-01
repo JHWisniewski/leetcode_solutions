@@ -1,14 +1,18 @@
 [
     {
-        "s": "z<*zj"
+        "s": "z<*zj",
+        "expected": "j<*zz"
     },
     {
-        "s": "ab-cd"
+        "s": "ab-cd",
+        "expected": "dc-ba"
     },
     {
-        "s": "a-bC-dEf-ghIj"
+        "s": "a-bC-dEf-ghIj",
+        "expected": "j-Ih-gfE-dCba"
     },
     {
-        "s": "Test1ng-Leet=code-Q!"
+        "s": "Test1ng-Leet=code-Q!",
+        "expected": "Qedo1ct-eeLg=ntse-T!"
     }
 ]

@@ -51,7 +51,14 @@ def main():
     for object in JSON:
         print(f"Input: nums = {object['nums']}")
         output = solution.sortedSquares(object['nums'])
-        print(f"Output: {output}\n")
+        print(f"Output: {output}")
+        print(f"Expected Output: {object['expected']}")
+
+        if output == object['expected']:
+            print("PASS")
+        else:
+            print("FAIL")
+        print()
 
 if __name__ == "__main__":
     main()

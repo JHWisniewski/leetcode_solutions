@@ -2,6 +2,12 @@ import json
 
 class Solution(object):
     """
+
+    You are given an integer array nums consisting of n elements, and an integer k.
+
+    Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. 
+    Any answer with a calculation error less than 10^-5 will be accepted.
+
     Constraints:
         n == nums.length
         1 <= k <= n <= 10^5
@@ -40,7 +46,14 @@ def main():
     for object in JSON:
         print(f"Input: nums = {object['nums']}, k = {object['k']}")
         output = solution.findMaxAverage(object['nums'], object['k'])
-        print(f"Output: {output:.5f}\n")
+        print(f"Output: {output:.5f}")
+        print(f"Expected Output: {object['expected']:.5f}")
+
+        if output == object['expected']:
+            print("PASS")
+        else:
+            print("FAIL")
+        print()
 
 if __name__ == "__main__":
     main()

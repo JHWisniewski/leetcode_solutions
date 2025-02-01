@@ -48,7 +48,14 @@ def main():
     for object in JSON:
         print(f"Input: s = {object['s']}")
         output = solution.reverseOnlyLetters(object['s'])
-        print(f"Output: {output}\n")
+        print(f"Output: {output}")
+        print(f"Expected Output: {object['expected']}")
+
+        if output == object['expected']:
+            print("PASS")
+        else:
+            print("FAIL")
+        print()
 
 if __name__ == "__main__":
     main()

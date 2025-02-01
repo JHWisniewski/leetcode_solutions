@@ -1,14 +1,18 @@
 [
     {
-        "s": "Let's take LeetCode contest"
+        "s": "Let's take LeetCode contest",
+        "expected": "s'teL ekat edoCteeL tsetnoc"
     },
     {
-        "s": "Mr Ding"
+        "s": "Mr Ding",
+        "expected": "rM gniD"
     },
     {
-        "s": "Hello"
+        "s": "Hello",
+        "expected": "olleH"
     },
     {
-        "s": "Hello World!"
+        "s": "Hello World!",
+        "expected": "olleH !dlroW"
     }
 ]
