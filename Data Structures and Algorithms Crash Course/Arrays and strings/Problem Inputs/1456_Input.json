@@ -1,0 +1,17 @@
+[
+    {
+        "s": "abciiidef",
+        "k": 3,
+        "expected": 3
+    },
+    {
+        "s": "aeiou",
+        "k": 2,
+        "expected": 2
+    },
+    {
+        "s": "leetcode",
+        "k": 3,
+        "expected": 2
+    }
+]

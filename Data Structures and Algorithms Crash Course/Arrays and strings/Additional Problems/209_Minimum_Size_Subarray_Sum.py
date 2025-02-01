@@ -3,9 +3,9 @@ import json
 class Solution(object):
     """
     Description:
-    Given an array of positive integers nums and a positive integer target, return the minimal length of a 
-    subarray whose sum is greater than or equal to target. 
-    If there is no such subarray, return 0 instead.
+        Given an array of positive integers nums and a positive integer target, return the minimal length of a 
+        subarray whose sum is greater than or equal to target. 
+        If there is no such subarray, return 0 instead.
 
     Constraints:
         1 <= target <= 10^9
@@ -37,17 +37,17 @@ class Solution(object):
                     left += 1
 
                 right += 1
-
+        
         #All feasible options exhausted
         if ans == len(nums) + 1:
             return 0
-        
+
         return ans
 
 def main():
     #Setup of solution with LeetCode example input
     solution = Solution()
-    
+
     with open('./Problem Inputs/209_Input.json') as f:
         JSON = json.loads(f.read())
 
