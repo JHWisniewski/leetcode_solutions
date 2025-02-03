@@ -2,6 +2,10 @@ import json
 
 class Solution(object):
     """
+    Description:
+        Given a string s, reverse the order of characters in each word within a 
+        sentence while still preserving whitespace and initial word order.
+        
     Constraints:
         1 <= s.length <= 5 * 10^4
         s contains printable ASCII characters.
