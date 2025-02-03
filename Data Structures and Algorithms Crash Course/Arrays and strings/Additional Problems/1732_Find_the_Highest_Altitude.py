@@ -20,12 +20,12 @@ class Solution(object):
         :type gain: List[int]
         :rtype: int
         """
-        left, curr, ans = 0
+        i = curr = ans = 0
 
-        while left < len(gain):
-            curr += gain[left]
+        while i < len(gain):
+            curr += gain[i]
             ans = max(ans, curr)
-            left += 1
+            i += 1
 
         return ans
 
