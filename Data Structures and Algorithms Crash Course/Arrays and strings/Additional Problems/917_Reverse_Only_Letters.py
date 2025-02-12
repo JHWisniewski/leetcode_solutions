@@ -1,4 +1,5 @@
 import json
+import string
 
 class Solution(object):
     """
@@ -15,15 +16,13 @@ class Solution(object):
         1 <= s.length <= 100
         s consists of characters with ASCII values in the range [33, 122].
         s does not contain '\"' or '\\'.
+
     """
-    
     def reverseOnlyLetters(self, s):
         """
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.
         """
-        import string
-
         #Two pointers for reversing string
         ans = list(s)
         left = 0

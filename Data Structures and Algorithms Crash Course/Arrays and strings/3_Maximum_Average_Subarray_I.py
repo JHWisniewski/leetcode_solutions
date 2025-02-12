@@ -12,6 +12,7 @@ class Solution(object):
         n == nums.length
         1 <= k <= n <= 10^5
         -10^4 <= nums[i] <= 10^4
+        
     """
     def findMaxAverage(self, nums, k):
         """

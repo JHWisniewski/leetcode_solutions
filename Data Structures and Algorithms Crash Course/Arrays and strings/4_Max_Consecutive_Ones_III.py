@@ -10,6 +10,7 @@ class Solution(object):
         1 <= nums.length <= 10^5
         nums[i] is either 0 or 1.
         0 <= k <= nums.length
+        
     """
     def longestOnes(self, nums, k):
         """

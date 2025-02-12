@@ -12,8 +12,8 @@ class Solution(object):
         s does not contain any leading or trailing spaces.
         There is at least one word in s.
         All the words in s are separated by a single space.
+        
     """
-    
     def reverseString(self, s):
         """
         :type s: List[str]

@@ -1,5 +1,4 @@
 import json
-import string
 
 class Solution(object):
     """
@@ -11,17 +10,19 @@ class Solution(object):
     Constraints:
         1 <= sentence.length <= 1000
         sentence consists of lowercase English letters.
+        
     """
     def checkIfPangram(self, sentence):
         """
         :type sentence: str
         :rtype: bool
         """
+        import string
+
         letters = set(string.ascii_lowercase)
         s_letters = set(sentence)
 
         return s_letters == letters
-
 
 def main():
     #Setup of solution with LeetCode example input

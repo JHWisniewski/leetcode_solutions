@@ -22,8 +22,8 @@ class Solution(object):
         n == nums.length
         1 <= n <= 10^5
         0 <= nums[i], k <= 10^5
-    """
 
+    """
     def getAverages(self, nums, k):
         """
         :type nums: List[int]

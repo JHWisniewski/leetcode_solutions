@@ -14,8 +14,8 @@ class Solution(object):
     Constraints:
         1 <= nums.length <= 100
         -100 <= nums[i] <= 100
-    """
 
+    """
     #Brute force, O(n^2)
     def minStartValue1(self, nums):
         """

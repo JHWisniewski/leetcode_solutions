@@ -10,8 +10,8 @@ class Solution(object):
     Constraints:
         1 <= nums.length <= 1000
         -10^6 <= nums[i] <= 10^6
+        
     """
-    
     def runningSum(self, nums):
         """
         :type nums: List[int]

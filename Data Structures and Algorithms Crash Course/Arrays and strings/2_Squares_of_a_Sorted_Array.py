@@ -10,8 +10,8 @@ class Solution(object):
         1 <= nums.length <= 10^4
         -10^4 <= nums[i] <= 10^4
         nums is sorted in non-decreasing order.
+        
     """
-
     def sortedSquares(self, nums):
         """
         :type nums: List[int]
