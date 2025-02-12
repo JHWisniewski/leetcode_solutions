@@ -1,0 +1,22 @@
+[
+    {
+        "sentence": "thequickbrownfoxjumpsoverthelazydog",
+        "expected": true
+    },
+    {
+        "sentence": "leetcode",
+        "expected": false
+    },
+    {
+        "sentence": "thefiveboxingwizardsjumpquickly",
+        "expected": true
+    },
+    {
+        "sentence": "amazinglyfewdiscothequesprovidejukeboxes",
+        "expected": true
+    },
+    {
+        "sentence": "sup",
+        "expected": false
+    }
+]
