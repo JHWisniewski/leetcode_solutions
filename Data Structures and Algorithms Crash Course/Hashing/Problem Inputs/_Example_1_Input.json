@@ -1,0 +1,37 @@
+[
+    {
+        "s": "eceba",
+        "k": 2,
+        "expected": 3
+    },
+    {
+        "s": "abcabcabc",
+        "k": 3,
+        "expected": 9
+    },
+    {
+        "s": "abcabeabc",
+        "k": 3,
+        "expected": 5
+    },
+    {
+        "s": "abcabcabccccccbbbbbaaaaaa",
+        "k": 9,
+        "expected": 25
+    },
+    {
+        "s": "ja;ljjbbbbnksdnf;sdf;gljs;dfg",
+        "k": 2,
+        "expected": 6
+    },
+    {
+        "s": "s",
+        "k": 0,
+        "expected": 0
+    },
+    {
+        "s": "s",
+        "k": 1,
+        "expected": 1
+    }
+]
