@@ -1,0 +1,14 @@
+[
+    {
+        "text": "nlaebolko",
+        "expected": 1
+    },
+    {
+        "text": "loonbalxballpoon",
+        "expected": 2
+    },
+    {
+        "text": "leetcode",
+        "expected": 0
+    }
+]
