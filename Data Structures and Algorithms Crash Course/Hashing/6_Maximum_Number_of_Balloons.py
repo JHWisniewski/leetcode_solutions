@@ -20,11 +20,11 @@ class Solution(object):
         :rtype: int
         """
         from collections import defaultdict
+        from collections import Counter
 
-        balloon = {'b': 1, 'a': 1, 'l': 2, 'o': 2, 'n': 1}
-        
+        balloon = Counter('balloon')
+
         count = defaultdict(int)
-        instances = []
 
         for letter in text:
             if letter in balloon:
@@ -34,9 +34,9 @@ class Solution(object):
             if count[letter] == 0:
                 return 0
             else:
-                instances.append(count[letter] // balloon[letter])
+                count[letter] //= balloon[letter]
 
-        return min(instances)
+        return min(count.values())
 
 def main():
     #Setup of solution with LeetCode example input
