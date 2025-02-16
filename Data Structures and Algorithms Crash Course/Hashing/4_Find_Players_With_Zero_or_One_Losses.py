@@ -33,10 +33,8 @@ class Solution(object):
         from collections import defaultdict
 
         players = set()
-        losses = defaultdict(int)
-        wins = defaultdict(int)
-        zero = []
-        one = []
+        losses, wins = defaultdict(int), defaultdict(int)
+        zero, one = [], []
 
         for match in matches:
             #Add players into players set

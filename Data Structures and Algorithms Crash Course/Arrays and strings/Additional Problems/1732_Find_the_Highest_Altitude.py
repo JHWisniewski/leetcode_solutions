@@ -20,7 +20,7 @@ class Solution(object):
         :type gain: List[int]
         :rtype: int
         """
-        i = curr = ans = 0
+        i, curr, ans = 0, 0, 0
 
         while i < len(gain):
             curr += gain[i]

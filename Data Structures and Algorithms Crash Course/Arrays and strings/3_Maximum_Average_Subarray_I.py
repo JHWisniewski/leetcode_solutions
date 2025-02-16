@@ -20,7 +20,7 @@ class Solution(object):
         :type k: int
         :rtype: float
         """
-        curr = ans = 0
+        curr, ans = 0, 0
         
         #Initial curr
         for i in range(k):

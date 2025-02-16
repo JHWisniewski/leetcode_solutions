@@ -18,7 +18,7 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        left = curr = ans = 0
+        left, curr, ans = 0, 0, 0
         
         for right, num in enumerate(nums):
             if num == 0:

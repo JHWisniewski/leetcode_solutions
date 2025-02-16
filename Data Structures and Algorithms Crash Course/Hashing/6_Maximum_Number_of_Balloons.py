@@ -23,7 +23,6 @@ class Solution(object):
         from collections import Counter
 
         balloon = Counter('balloon')
-
         count = defaultdict(int)
 
         for letter in text:

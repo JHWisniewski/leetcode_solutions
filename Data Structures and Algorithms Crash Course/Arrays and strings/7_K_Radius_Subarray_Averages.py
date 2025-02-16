@@ -55,8 +55,7 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        i = 0
-        total = 0
+        i, total = 0, 0
         ans = []
         denom = 2 * k + 1
         

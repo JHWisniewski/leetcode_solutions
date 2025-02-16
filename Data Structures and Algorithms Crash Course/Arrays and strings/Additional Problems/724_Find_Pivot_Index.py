@@ -23,7 +23,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        i = l_sum = r_sum = 0
+        i, l_sum, r_sum = 0, 0, 0
         prefix = [nums[0]]
 
         #Build prefix

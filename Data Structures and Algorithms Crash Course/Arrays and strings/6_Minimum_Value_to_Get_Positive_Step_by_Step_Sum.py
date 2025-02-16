@@ -43,7 +43,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        startVal = total = 0
+        startVal, total = 0, 0
         
         #Keep just step-by-step calculation in mind
         #All we need is the minium step value

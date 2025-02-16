@@ -22,7 +22,7 @@ class Solution(object):
         """
         left = 0
         right = k - 1
-        curr = ans = 0
+        curr, ans = 0, 0
         vowels = {'a', 'e', 'i', 'o', 'u'}
 
         #Initial substring build

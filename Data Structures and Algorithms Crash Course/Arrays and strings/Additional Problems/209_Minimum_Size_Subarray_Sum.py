@@ -20,7 +20,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        left = right = curr = 0
+        left, right, curr = 0, 0, 0
 
         #Set to minimum impossible value
         ans = len(nums) + 1
