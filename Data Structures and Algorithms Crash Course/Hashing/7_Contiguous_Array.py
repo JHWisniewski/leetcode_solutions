@@ -18,6 +18,27 @@ class Solution(object):
         """
         from collections import defaultdict
         
+        counts = defaultdict(int)
+        curr, ans = 0, 0
+        counts[0] = -1
+
+        for i, num in enumerate(nums):
+            curr += 1 if num == 1 else -1
+            
+            if curr in counts:
+                ans = max(ans, i - counts[curr])
+            else:
+                counts[curr] = i
+
+        return ans
+    
+    def findMaxLengthHard(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        from collections import defaultdict
+        
         diff, ans = 0, 0
         diff_ind = defaultdict(int)
 
