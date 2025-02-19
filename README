@@ -1,6 +1,8 @@
 Interview prep fun!
 
-For "from my_lib.file import function" use:
+For `python from my_lib.my_file import my_function` use:
+
+   Example from 557_Reverse_Words_in_a_String_III.py: `python from lib.reverseString import reverseString`
 
    -Create .env at root directory with:
       PYTHONPATH = { YOUR WORKSPACE FOLDER }
