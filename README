@@ -1,0 +1,12 @@
+Interview prep fun!
+
+For "from my_lib.file import function" use:
+
+   -Create .env at root directory with:
+      PYTHONPATH = { YOUR WORKSPACE FOLDER }
+
+   -Adjust code-workspace file settings json with:
+      (FOR WINDOWS)
+      "terminal.integrated.env.windows": {
+         "PYTHONPATH": "${workspaceFolder};"
+      },

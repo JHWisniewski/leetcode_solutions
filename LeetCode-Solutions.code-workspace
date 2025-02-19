@@ -6,7 +6,8 @@
 	],
 	"settings": {
 		"terminal.integrated.env.windows": {
-    "PYTHONPATH": "${workspaceFolder};"
-  },
+    		"PYTHONPATH": "${workspaceFolder};"
+		},
+		"ProjectTree.distFileName": "project_tree.md",
 	}
 }
