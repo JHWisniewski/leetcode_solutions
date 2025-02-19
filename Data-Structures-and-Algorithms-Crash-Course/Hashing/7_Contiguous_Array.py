@@ -62,7 +62,7 @@ def main():
     #Setup of solution with LeetCode example input
     solution = Solution()
     
-    with open('./Problem Inputs/7_Input.json') as f:
+    with open('./Problem-Inputs/7_Input.json') as f:
         JSON = json.loads(f.read())
 
     for object in JSON:
