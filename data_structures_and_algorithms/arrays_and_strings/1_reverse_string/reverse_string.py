@@ -49,7 +49,8 @@ def main():
         output = solution.reverse_string(item["s"])
         print(f"Output: {output}")
         print(f"Expected Output: {item['expected']}")
-        test(output, item['expected'])
+        test(output, item["expected"])
+
 
 if __name__ == "__main__":
     main()

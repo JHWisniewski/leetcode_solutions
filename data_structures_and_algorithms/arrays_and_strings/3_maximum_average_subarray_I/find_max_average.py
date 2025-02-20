@@ -1,4 +1,5 @@
 import json
+from lib.test import test
 
 
 class Solution(object):
@@ -54,12 +55,7 @@ def main():
         output = solution.find_max_average(item["nums"], item["k"])
         print(f"Output: {output:.5f}")
         print(f"Expected Output: {item['expected']:.5f}")
-
-        if output == item["expected"]:
-            print("PASS")
-        else:
-            print("FAIL")
-        print()
+        test(output, item["expected"])
 
 
 if __name__ == "__main__":
