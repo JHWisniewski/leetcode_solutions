@@ -1,5 +1,6 @@
 import json
 from lib.sum_digits import sum_digits
+from lib.test import test
 
 
 class Solution(object):

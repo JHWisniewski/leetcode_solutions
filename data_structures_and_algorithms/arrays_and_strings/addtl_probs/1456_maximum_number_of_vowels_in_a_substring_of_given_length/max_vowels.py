@@ -1,4 +1,5 @@
 import json
+from lib.test import test
 
 
 class Solution(object):
