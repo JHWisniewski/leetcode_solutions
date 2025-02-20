@@ -1,5 +1,6 @@
 import json
 
+
 class Solution(object):
     """
     Description:
@@ -14,6 +15,7 @@ class Solution(object):
         1 <= k <= s.length
 
     """
+
     def max_vowels(self, s, k):
         """
         :type s: str
@@ -23,9 +25,9 @@ class Solution(object):
         left = 0
         right = k - 1
         curr, ans = 0, 0
-        vowels = {'a', 'e', 'i', 'o', 'u'}
+        vowels = {"a", "e", "i", "o", "u"}
 
-        #Initial substring build
+        # Initial substring build
         while left <= right:
             if s[left] in vowels:
                 curr += 1
@@ -34,11 +36,11 @@ class Solution(object):
             else:
                 left += 1
 
-        #Setup window expansion and shrink
+        # Setup window expansion and shrink
         left = 0
         right += 1
 
-        #Rest of substrings
+        # Rest of substrings
         while right < len(s):
             if s[right] in vowels:
                 curr += 1
@@ -50,25 +52,27 @@ class Solution(object):
 
         return ans
 
-def main():
-    #Setup of solution with LeetCode example input
-    solution = Solution()
-    path = './data_structures_and_algorithms/arrays_and_strings/addtl_probs/1456_maximum_number_of_vowels_in_a_substring_of_given_length/input.json'
 
-    with open(path, encoding = "utf-8") as f:
+def main():
+    # Setup of solution with LeetCode example input
+    solution = Solution()
+    path = "./data_structures_and_algorithms/arrays_and_strings/addtl_probs/1456_maximum_number_of_vowels_in_a_substring_of_given_length/input.json"
+
+    with open(path, encoding="utf-8") as f:
         data = json.loads(f.read())
 
     for item in data:
         print(f"Input: s = {item['s']}, k = {item['k']}")
-        output = solution.max_vowels(item['s'], item['k'])
+        output = solution.max_vowels(item["s"], item["k"])
         print(f"Output: {output}")
         print(f"Expected Output: {item['expected']}")
 
-        if output == item['expected']:
+        if output == item["expected"]:
             print("PASS")
         else:
             print("FAIL")
         print()
+
 
 if __name__ == "__main__":
     main()

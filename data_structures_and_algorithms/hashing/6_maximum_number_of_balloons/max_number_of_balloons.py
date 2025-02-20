@@ -1,19 +1,21 @@
 import json
 
+
 class Solution(object):
     """
     Description:
-        Given a string text, you want to use the characters of text to form as many instances 
+        Given a string text, you want to use the characters of text to form as many instances
         of the word "balloon" as possible.
 
-        You can use each character in text at most once. Return the maximum number of 
+        You can use each character in text at most once. Return the maximum number of
         instances that can be formed.
 
     Constraints:
         1 <= text.length <= 10^4
         text consists of lower case English letters only.
-        
+
     """
+
     def max_number_of_balloons(self, text):
         """
         :type text: str
@@ -22,7 +24,7 @@ class Solution(object):
         from collections import defaultdict
         from collections import Counter
 
-        balloon = Counter('balloon')
+        balloon = Counter("balloon")
         count = defaultdict(int)
 
         for letter in text:
@@ -37,25 +39,27 @@ class Solution(object):
 
         return min(count.values())
 
-def main():
-    #Setup of solution with LeetCode example input
-    solution = Solution()
-    path = './data_structures_and_algorithms/hashing/6_maximum_number_of_balloons/input.json'
 
-    with open(path, encoding = "utf-8") as f:
+def main():
+    # Setup of solution with LeetCode example input
+    solution = Solution()
+    path = "./data_structures_and_algorithms/hashing/6_maximum_number_of_balloons/input.json"
+
+    with open(path, encoding="utf-8") as f:
         data = json.loads(f.read())
 
     for item in data:
         print(f"Input: text = {item['text']}")
-        output = solution.max_number_of_balloons(item['text'])
+        output = solution.max_number_of_balloons(item["text"])
         print(f"Output: {output}")
         print(f"Expected Output: {item['expected']}")
 
-        if output == item['expected']:
+        if output == item["expected"]:
             print("PASS")
         else:
             print("FAIL")
         print()
+
 
 if __name__ == "__main__":
     main()

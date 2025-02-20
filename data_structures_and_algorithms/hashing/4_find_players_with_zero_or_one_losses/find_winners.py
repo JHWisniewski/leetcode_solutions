@@ -1,9 +1,10 @@
 import json
 
+
 class Solution(object):
     """
     Description:
-        You are given an integer array matches where matches[i] = [winner[i], loser[i]] indicates 
+        You are given an integer array matches where matches[i] = [winner[i], loser[i]] indicates
         that the player winner[i] defeated player loseri in a match.
 
         Return a list answer of size 2 where:
@@ -14,7 +15,7 @@ class Solution(object):
 
         Note:
             You should only consider the players that have played at least one match.
-            
+
             The testcases will be generated such that no two matches will have the same outcome.
 
     Constraints:
@@ -23,8 +24,9 @@ class Solution(object):
         1 <= winner[i], loser[i] <= 10^5
         winner[i] != loser[i]
         All matches[i] are unique.
-        
+
     """
+
     def find_winners(self, matches):
         """
         :type matches: List[List[int]]
@@ -37,13 +39,13 @@ class Solution(object):
         zero, one = [], []
 
         for match in matches:
-            #Add players into players set
+            # Add players into players set
             if match[0] not in players:
                 players.add(match[0])
             if match[1] not in players:
                 players.add(match[1])
 
-            #Tally wins and losses
+            # Tally wins and losses
             wins[match[0]] += 1
             losses[match[1]] += 1
 
@@ -55,25 +57,27 @@ class Solution(object):
 
         return [sorted(zero), sorted(one)]
 
-def main():
-    #Setup of solution with LeetCode example input
-    solution = Solution()
-    path = './data_structures_and_algorithms/hashing/4_find_players_with_zero_or_one_losses/input.json'
 
-    with open(path, encoding = "utf-8") as f:
+def main():
+    # Setup of solution with LeetCode example input
+    solution = Solution()
+    path = "./data_structures_and_algorithms/hashing/4_find_players_with_zero_or_one_losses/input.json"
+
+    with open(path, encoding="utf-8") as f:
         data = json.loads(f.read())
 
     for item in data:
         print(f"Input: matches = {item['matches']}")
-        output = solution.find_winners(item['matches'])
+        output = solution.find_winners(item["matches"])
         print(f"Output: {output}")
         print(f"Expected Output: {item['expected']}")
 
-        if output == item['expected']:
+        if output == item["expected"]:
             print("PASS")
         else:
             print("FAIL")
         print()
+
 
 if __name__ == "__main__":
     main()
