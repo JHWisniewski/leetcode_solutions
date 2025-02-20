@@ -33,7 +33,7 @@ class Solution(object):
                 res.append(num)
 
         return sorted(res)
-    
+
     def operator_intersection(self, nums):
         """
         :type arr: List[int]
