@@ -75,12 +75,7 @@ def main():
         output = solution.find_max_length_hard(item["nums"])
         print(f"Output: {output}")
         print(f"Expected Output: {item['expected']}")
-
-        if output == item["expected"]:
-            print("PASS")
-        else:
-            print("FAIL")
-        print()
+        test(output, item["expected"])
 
 
 if __name__ == "__main__":

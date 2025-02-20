@@ -41,12 +41,7 @@ def main():
         output = solution.missing_number(item["nums"])
         print(f"Output: {output}")
         print(f"Expected Output: {item['expected']}")
-
-        if output == item["expected"]:
-            print("PASS")
-        else:
-            print("FAIL")
-        print()
+        test(output, item["expected"])
 
 
 if __name__ == "__main__":
