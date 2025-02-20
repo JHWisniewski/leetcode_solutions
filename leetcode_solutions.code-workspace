@@ -9,5 +9,8 @@
     		"PYTHONPATH": "${workspaceFolder};"
 		},
 		"ProjectTree.distFileName": "project_tree.md",
+		"pylint.args": [
+			"\"pylint.args\": [\"--disable=C0111\", \"--disable=R0801\"]"
+		],
 	}
 }
