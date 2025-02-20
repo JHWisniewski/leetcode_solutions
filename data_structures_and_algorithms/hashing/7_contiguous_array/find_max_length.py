@@ -14,7 +14,7 @@ class Solution(object):
 
     """
 
-    def findMaxLength(self, nums):
+    def find_max_length(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -72,7 +72,7 @@ def main():
 
     for item in data:
         print(f"Input: nums = {item['nums']}")
-        output = solution.find_max_length_hard(item["nums"])
+        output = solution.find_max_length(item["nums"])
         print(f"Output: {output}")
         print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])

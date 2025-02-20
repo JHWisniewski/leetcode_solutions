@@ -35,8 +35,7 @@ class Solution(object):
         for letter in balloon:
             if count[letter] == 0:
                 return 0
-            else:
-                count[letter] //= balloon[letter]
+            count[letter] //= balloon[letter]
 
         return min(count.values())
 

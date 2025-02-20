@@ -27,6 +27,9 @@ class Solution(object):
             if i not in nums:
                 return i
 
+        # Invalid data set
+        return -1
+
 
 def main():
     # Setup of solution with LeetCode example input
