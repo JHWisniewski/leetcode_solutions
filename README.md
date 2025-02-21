@@ -4,25 +4,25 @@ interview_prep_fun = LeetCode(python, ...)
 
 ## Links to LeetCode's Crash Courses
 
-[Home Page](https://leetcode.com/explore/)  
-[Data Structures and Algorithms](https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/)
+- [Home Page](https://leetcode.com/explore/)
+- [Data Structures and Algorithms](https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/)
 
 ## Useful Info
 
 ### Linters and Formatters Used
 
-[Pylint](https://github.com/pylint-dev/pylint)  
-[Black](https://github.com/psf/black)
+- [Pylint](https://github.com/pylint-dev/pylint)
+- [Black](https://github.com/psf/black)
 
 ### Python Custom Modules
 
 For use of a custom module like:
-```python 
+```python
 from my_lib.my_file import my_function
 ```
 
  - Example from reverse_words.py:
-   ```python 
+   ```python
    from lib.reverse_string import reverse_string
    ```
 

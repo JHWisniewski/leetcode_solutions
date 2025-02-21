@@ -4,7 +4,7 @@ max-line-length=256
 [MESSAGES CONTROL]
 disable=duplicate-code,import-outside-toplevel,missing-docstring,too-few-public-methods,useless-object-inheritance,pointless-string-statement
 
-# duplicate-code: repeated code for some solutions (needs to be added to lib) and inherently 
+# duplicate-code: repeated code for some solutions (needs to be added to lib) and inherently
 # similar main code in each LeetCode module
 
 # import-outside-toplevel: common submissions have imports directly in the functiones themselves
