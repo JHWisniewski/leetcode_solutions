@@ -50,8 +50,6 @@ def main():
     for item in data:
         print(f"Input: cards = {item['cards']}")
         output = solution.minimum_card_pickup(item["cards"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

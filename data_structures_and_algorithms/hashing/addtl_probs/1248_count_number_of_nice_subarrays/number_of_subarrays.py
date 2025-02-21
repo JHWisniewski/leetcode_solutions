@@ -48,8 +48,6 @@ def main():
     for item in data:
         print(f"Input: nums = {item['nums']}, k = {item['k']}")
         output = solution.number_of_subarrays(item["nums"], item["k"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

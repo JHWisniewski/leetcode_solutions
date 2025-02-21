@@ -40,8 +40,6 @@ def main():
     for item in data:
         print(f"Input: s = {item['nums']}")
         output = solution.running_sum(item["nums"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

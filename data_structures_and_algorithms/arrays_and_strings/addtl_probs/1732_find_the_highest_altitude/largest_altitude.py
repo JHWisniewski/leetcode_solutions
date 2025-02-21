@@ -44,8 +44,6 @@ def main():
     for item in data:
         print(f"Input: gain = {item['gain']}")
         output = solution.largest_altitude(item["gain"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

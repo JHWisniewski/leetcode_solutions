@@ -60,8 +60,6 @@ def main():
     for item in data:
         print(f"Input: target = {item['target']}, nums = {item['nums']}")
         output = solution.min_subarray_len(item["target"], item["nums"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

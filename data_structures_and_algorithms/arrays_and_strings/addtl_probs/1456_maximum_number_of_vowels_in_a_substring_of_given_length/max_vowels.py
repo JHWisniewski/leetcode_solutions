@@ -65,8 +65,6 @@ def main():
     for item in data:
         print(f"Input: s = {item['s']}, k = {item['k']}")
         output = solution.max_vowels(item["s"], item["k"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

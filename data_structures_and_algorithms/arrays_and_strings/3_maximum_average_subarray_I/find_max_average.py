@@ -53,8 +53,6 @@ def main():
     for item in data:
         print(f"Input: nums = {item['nums']}, k = {item['k']}")
         output = solution.find_max_average(item["nums"], item["k"])
-        print(f"Output: {output:.5f}")
-        print(f"Expected Output: {item['expected']:.5f}")
         test(output, item["expected"])
 
 
