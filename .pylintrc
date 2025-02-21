@@ -2,7 +2,7 @@
 max-line-length=256
 
 [MESSAGES CONTROL]
-disable=duplicate-code,import-outside-toplevel,missing-docstring,too-few-public-methods,useless-object-inheritance
+disable=duplicate-code,import-outside-toplevel,missing-docstring,too-few-public-methods,useless-object-inheritance,pointless-string-statement
 
 # duplicate-code: repeated code for some solutions (needs to be added to lib) and inherently 
 # similar main code in each LeetCode module
@@ -14,3 +14,5 @@ disable=duplicate-code,import-outside-toplevel,missing-docstring,too-few-public-
 # too-few-public-methods: LeetCode has Solution class-based submissions
 
 # useless-object-inheritance: LeetCode has Solution class-based submissions
+
+# pointless-string-statement: Pylint really hates my notes in a string block comment
