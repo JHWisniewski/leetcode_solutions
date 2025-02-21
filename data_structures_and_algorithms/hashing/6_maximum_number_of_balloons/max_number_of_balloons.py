@@ -51,8 +51,6 @@ def main():
     for item in data:
         print(f"Input: text = {item['text']}")
         output = solution.max_number_of_balloons(item["text"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

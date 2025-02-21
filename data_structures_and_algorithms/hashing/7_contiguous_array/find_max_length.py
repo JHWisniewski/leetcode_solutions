@@ -73,8 +73,6 @@ def main():
     for item in data:
         print(f"Input: nums = {item['nums']}")
         output = solution.find_max_length(item["nums"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

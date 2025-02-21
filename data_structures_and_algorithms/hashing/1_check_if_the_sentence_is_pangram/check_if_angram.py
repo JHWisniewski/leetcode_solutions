@@ -40,8 +40,6 @@ def main():
     for item in data:
         print(f"Input: sentence = {item['sentence']}")
         output = solution.check_if_angram(item["sentence"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

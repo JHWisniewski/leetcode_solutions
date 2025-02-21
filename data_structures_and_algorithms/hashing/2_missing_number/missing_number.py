@@ -42,8 +42,6 @@ def main():
     for item in data:
         print(f"Input: nums = {item['nums']}")
         output = solution.missing_number(item["nums"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

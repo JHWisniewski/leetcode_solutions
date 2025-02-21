@@ -61,8 +61,6 @@ def main():
     for item in data:
         print(f"Input: s = {item['s']}")
         output = solution.reverse_only_letters(item["s"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

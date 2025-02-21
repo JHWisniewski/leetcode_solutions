@@ -70,8 +70,6 @@ def main():
     for item in data:
         print(f"Input: matches = {item['matches']}")
         output = solution.find_winners(item["matches"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 

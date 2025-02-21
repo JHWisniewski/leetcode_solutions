@@ -44,8 +44,6 @@ def main():
     for item in data:
         print(f"Input: arr = {item['arr']}")
         output = solution.count_elements(item["arr"])
-        print(f"Output: {output}")
-        print(f"Expected Output: {item['expected']}")
         test(output, item["expected"])
 
 
