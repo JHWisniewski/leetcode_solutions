@@ -61,6 +61,8 @@ class Solution(object):
         for row in grid:
             c[tuple(row)] += 1
 
+        # Stupid python magic with zip function and * expander
+        # Not useful for explanation in interview, but * looks cool for later
         for col in zip(*grid):
             if col in c:
                 ans += c[col]
