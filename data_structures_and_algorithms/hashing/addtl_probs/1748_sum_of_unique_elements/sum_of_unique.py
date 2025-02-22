@@ -21,13 +21,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        from collections import defaultdict
+        from collections import Counter
 
-        count = defaultdict(int)
+        count = Counter(nums)
         ans = 0
-
-        for num in nums:
-            count[num] += 1
 
         for c in count:
             if count[c] == 1:
