@@ -2,19 +2,78 @@
 
 interview_prep_fun = LeetCode(python, ...)
 
-## Links to LeetCode's Crash Courses
+
+## 1. Links to LeetCode's Crash Courses
 
 - [Home Page](https://leetcode.com/explore/)
 - [Data Structures and Algorithms](https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/)
 
-## Useful Info
 
-### Linters and Formatters Used
+## 2. Useful Info
 
-- [Pylint](https://github.com/pylint-dev/pylint)
+### A. Linters and Formatters Used
+
+- [Pylint - VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
+
+   I recommend installing the VS Code extension for inline suggestions on current warnings.  It takes some tweaking to get your warnings right.
+
+   That involves some annoying workspace adjustments to VS Code settings specifically that I will not elaborate on.
+
+- [Pylint - CLI](https://github.com/pylint-dev/pylint)
+
+   Run this directly in your root directory for a CLI-oriented experience.
+
+   1. To install, run `pip install Pylint` (May be different for you!)
+
+   2. Run `Pylint .` in your root directory and watch the magic
+
+      - I got this running pretty well with my .pylintrc file.  You can see the contents in my repo with some comments on arguments.
+
+- [pre-commit](https://pre-commit.com/)
+
+   This interfaces directly with git to perform formatting before commits/pushes to a branch.
+
+   1. Run `pip install pre-commit` in root directory (I am using PowerShell in VS Code, so yours may differ).
+
+   2. Create .pre-commit-config.yaml in your root directory with the following (default) contents:
+      ```yaml
+      repos:
+      -   repo: https://github.com/pre-commit/pre-commit-hooks
+         rev: v2.3.0
+         hooks:
+         -   id: check-yaml
+         -   id: end-of-file-fixer
+         -   id: trailing-whitespace
+      -   repo: https://github.com/psf/black
+         rev: 22.10.0
+         hooks:
+         -   id: black
+      ```
+
+      - I would like to experiment with adding custom scripts.  It looks like the following will be applicable:
+         ```yaml
+         - repo: local
+         hooks:
+            - id: custom-script-file
+               name: custom-script-file
+               entry: relative/path/to/repo/root/check_pylint.sh
+               language: script
+               types: [python]
+               pass_filenames: false
+         ```
+
+   3. Run `pre-commit install`
+
+   4. You are done!  Now when you run `git commit -m "<YOUR MESSAGE>"` after staging files, you will have auto formatting performed on your code!
+
+      - NOTE: If the formatters change files, you have to repeat your `git add -all` and `git commit -m "<YOUR MESSAGE>"` commands
+
 - [Black](https://github.com/psf/black)
 
-### Python Custom Modules
+   Available as part of the recommended git hooks installed with pre-commit. (See pre-commit link)
+
+
+### B. Python Custom Modules
 
 For use of a custom module like:
 ```python
@@ -29,9 +88,9 @@ from my_lib.my_file import my_function
 You need to adjust some environment stuff.  For me personally using Windows with VS Code and Python, I had
 to do the following:
 
-   1. Create .env at root directory with:
+   1. Create .env at the root directory with the following contents:
       ```python
-      PYTHONPATH = { YOUR WORKSPACE FOLDER }
+      PYTHONPATH = { "<YOUR WORKSPACE FOLDER>" }
       ```
 
    2. Adjust VS Code's 'PROJECT'.code-workspace file's settings JSON with:
@@ -41,8 +100,9 @@ to do the following:
       },
       ```
 
-## Micellaneous Items
 
-### Project Tree
+## 3. Micellaneous Items
+
+### A. Project Tree
 
 [The workspace](project_tree.md) (so far)...

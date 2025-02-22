@@ -1,6 +1,8 @@
 [MAIN]
 max-line-length=256
 
+# Pylint really doesn't like long file paths
+
 [MESSAGES CONTROL]
 disable=duplicate-code,import-outside-toplevel,missing-docstring,too-few-public-methods,useless-object-inheritance,pointless-string-statement
 
