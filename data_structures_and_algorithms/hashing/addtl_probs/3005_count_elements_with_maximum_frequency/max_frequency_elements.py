@@ -5,10 +5,12 @@ from lib.test import test
 class Solution(object):
     """
     Description:
-        You are given an integer array nums. The unique elements of an array are the elements that
-        appear exactly once in the array.
+        You are given an array nums consisting of positive integers.
 
-        Return the sum of all the unique elements of nums.
+        Return the total frequencies of elements in nums such that those elements all have the
+        maximum frequency.
+
+        The frequency of an element is the number of occurrences of that element in the array.
 
     Constraints:
         1 <= nums.length <= 100
@@ -16,7 +18,7 @@ class Solution(object):
 
     """
 
-    def sum_of_unique(self, nums):
+    def max_frequency_elements(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -24,14 +26,15 @@ class Solution(object):
         from collections import defaultdict
 
         count = defaultdict(int)
-        ans = 0
+        max_freq, ans = 0, 0
 
         for num in nums:
             count[num] += 1
+            max_freq = max(max_freq, count[num])
 
         for c in count:
-            if count[c] == 1:
-                ans += c
+            if count[c] == max_freq:
+                ans += max_freq
 
         return ans
 
@@ -39,14 +42,14 @@ class Solution(object):
 def main():
     # Setup of solution with LeetCode example input
     solution = Solution()
-    path = "./data_structures_and_algorithms/hashing/addtl_probs/1748_sum_of_unique_elements/input.json"
+    path = "./data_structures_and_algorithms/hashing/addtl_probs/3005_count_elements_with_maximum_frequency/input.json"
 
     with open(path, encoding="utf-8") as f:
         data = json.loads(f.read())
 
     for item in data:
         print(f"Input: nums = {item['nums']}")
-        output = solution.sum_of_unique(item["nums"])
+        output = solution.max_frequency_elements(item["nums"])
         test(output, item["expected"])
 
 
