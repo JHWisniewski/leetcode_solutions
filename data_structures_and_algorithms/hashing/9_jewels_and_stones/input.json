@@ -1,0 +1,12 @@
+[
+    {
+        "jewels": "aA",
+        "stones": "aAAbbbb",
+        "expected": 3
+    },
+    {
+        "jewels": "z",
+        "stones": "ZZ",
+        "expected": 0
+    }
+]

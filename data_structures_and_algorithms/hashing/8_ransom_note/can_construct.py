@@ -22,20 +22,16 @@ class Solution(object):
         :type magazine: str
         :rtype: bool
         """
-        from collections import defaultdict
+        from collections import Counter
 
-        magazine_count, note_count = defaultdict(int), defaultdict(int)
-
-        for letter in magazine:
-            magazine_count[letter] += 1
-
-        for letter in ransomNote:
-            if letter not in magazine_count:
-                return False
-            note_count[letter] += 1
+        magazine_count = Counter(magazine)
+        note_count = Counter(ransomNote)
 
         for letter in note_count:
-            if note_count[letter] > magazine_count[letter]:
+            if (
+                letter not in magazine_count
+                or note_count[letter] > magazine_count[letter]
+            ):
                 return False
 
         return True
