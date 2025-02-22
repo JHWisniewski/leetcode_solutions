@@ -1,0 +1,10 @@
+[
+    {
+        "path": "NES",
+        "expected": false
+    },
+    {
+        "path": "NESWW",
+        "expected": true
+    }
+]

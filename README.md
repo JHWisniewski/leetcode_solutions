@@ -72,7 +72,6 @@ interview_prep_fun = LeetCode(python, ...)
 
    Available as part of the recommended git hooks installed with pre-commit. (See pre-commit link)
 
-
 ### B. Python Custom Modules
 
 For use of a custom module like:
@@ -85,8 +84,7 @@ from my_lib.my_file import my_function
    from lib.reverse_string import reverse_string
    ```
 
-You need to adjust some environment stuff.  For me personally using Windows with VS Code and Python, I had
-to do the following:
+You need to adjust some environment stuff.  For me personally using Windows with VS Code and Python, I had to do the following:
 
    1. Create .env at the root directory with the following contents:
       ```python
@@ -99,6 +97,35 @@ to do the following:
          "PYTHONPATH": "${workspaceFolder};"
       },
       ```
+
+   3. Create a debug launch.json from the **Run and Debug** menu and change the following contents:
+      ```json
+      {
+         "version": "0.2.0",
+         "configurations": [
+            {
+                  "name": "Python: Module",
+                  "type": "debugpy",
+                  "request": "launch",
+                  "module": "folder_structure.main",
+                  "justMyCode": true
+            },
+            {
+                  "name": "Python: Current File",
+                  "type": "debugpy",
+                  "request": "launch",
+                  "program": "${file}",
+                  "console": "integratedTerminal",
+                  "env": {
+                     "PYTHONPATH": "${workspaceRoot}"
+                  },
+                  "cwd": "${workspaceRoot}",
+            }
+         ]
+      }
+      ```
+
+   You can now run python files as normal from the **Run Python File** button up top. To debug, you will need to go into the **Run and Debug** menu on the primary sidebar and ensure **Python: Current File** is selected.  Run from the play button there when needed. (Still looking into other options for this... VS Code, why?)
 
 
 ## 3. Micellaneous Items
