@@ -23,14 +23,14 @@ class Solution(object):
         count = defaultdict(int)
         left, ans = 0, 0
 
-        for i, letter in enumerate(s):
+        for right, letter in enumerate(s):
             count[letter] += 1
 
             while count[letter] > 1:
                 count[s[left]] -= 1
                 left += 1
 
-            ans = max(ans, i - left + 1)
+            ans = max(ans, right - left + 1)
 
         return ans
 
