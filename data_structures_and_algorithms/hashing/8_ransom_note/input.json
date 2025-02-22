@@ -1,0 +1,16 @@
+[
+    {
+        "ransomNote": "a",
+        "magazine": "b",
+        "expected": false
+    },
+    {
+        "ransomNote": "aa",
+        "magazine": "ab",
+        "expected": false
+    },{
+        "ransomNote": "aa",
+        "magazine": "aab",
+        "expected": true
+    }
+]
