@@ -19,10 +19,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        if len(nums) == len(set(nums)):
-            return False
-
-        return True
+        return len(nums) != len(set(nums))
 
 
 def main():

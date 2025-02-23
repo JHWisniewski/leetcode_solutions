@@ -1,0 +1,27 @@
+[
+    {
+        "s": "egg",
+        "t": "add",
+        "expected": true
+    },
+    {
+        "s": "foo",
+        "t": "bar",
+        "expected": false
+    },
+    {
+        "s": "paper",
+        "t": "title",
+        "expected": true
+    },
+    {
+        "s": "badc",
+        "t": "baba",
+        "expected": false
+    },
+    {
+        "s": "papap",
+        "t": "titii",
+        "expected": false
+    }
+]

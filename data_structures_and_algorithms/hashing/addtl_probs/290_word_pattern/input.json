@@ -1,0 +1,22 @@
+[
+    {
+        "pattern": "abba",
+        "s": "dog cat cat dog",
+        "expected": true
+    },
+    {
+        "pattern": "abba",
+        "s": "dog cat cat fish",
+        "expected": false
+    },
+    {
+        "pattern": "aaaa",
+        "s": "dog cat cat dog",
+        "expected": false
+    },
+    {
+        "pattern": "aaa",
+        "s": "aa aa aa aa",
+        "expected": false
+    }
+]
