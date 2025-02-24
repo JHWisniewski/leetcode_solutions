@@ -1,6 +1,6 @@
 import json
 from lib.test import test
-from lib.build_list import ListNode, sl_list
+from lib.list import ListNode, sl_list
 
 
 class Solution(object):
