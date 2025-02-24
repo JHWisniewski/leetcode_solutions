@@ -43,7 +43,9 @@ class Solution(object):
 def main():
     # Setup of solution with LeetCode example input
     solution = Solution()
-    path = "./data_structures_and_algorithms/linked_lists/addtl_probs/linked_list_example_2/input.json"
+    path = (
+        "./data_structures_and_algorithms/linked_lists/addtl_probs/example_2/input.json"
+    )
 
     with open(path, encoding="utf-8") as f:
         data = json.loads(f.read())
