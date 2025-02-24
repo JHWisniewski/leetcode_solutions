@@ -4,6 +4,7 @@ class ListNode(object):
         self.next = None
 
 
+# Build singly-linked list given list of 'nums' and cycle index 'pos'
 def sl_list(nums, pos):
     """
     :type nums: list
