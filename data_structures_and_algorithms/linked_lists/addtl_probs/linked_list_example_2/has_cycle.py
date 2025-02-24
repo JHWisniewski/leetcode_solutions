@@ -37,7 +37,6 @@ def main():
 
     for item in data:
         print(f"Input: head = {item['head']}, pos = {item['pos']}")
-
         output = solution.has_cycle(sl_list(item["head"], item["pos"]))
         test(output, item["expected"])
 
