@@ -1,30 +1,43 @@
 import json
 from lib.test import test
-from lib.list import ListNode, sl_list
+from lib.list import sl_list
 
 
 class Solution(object):
     """
     Description:
-        Given the head of a linked list with an odd number of nodes head, return the value of the
-        node in the middle.
+        Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
-        For example, given a linked list that represents 1 -> 2 -> 3 -> 4 -> 5, return 3.
+        There is a cycle in a linked list if there is some node in the list that can be reached
+        again by continuously following the next pointer. Internally, pos is used to denote the
+        index of the node that tail's next pointer is connected to. Note that pos is not passed as
+        a parameter.
+
+        Return true if there is a cycle in the linked list. Otherwise, return false.
+
+    Constraints:
+        The number of the nodes in the list is in the range [0, 10^4].
+        -10^5 <= Node.val <= 10^5
+        pos is -1 or a valid index in the linked-list.
 
     """
 
-    def has_cycle(self, head: ListNode):
+    def has_cycle(self, head):
         """
         :type head: ListNode
         :rtype: bool
         """
-        for i in range(8):
-            if not head:
-                break
-            print(head.val)
-            head = head.next
+        slow = head
+        fast = head
 
-        return 0
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+            if slow == fast:
+                return True
+
+        return False
 
 
 def main():

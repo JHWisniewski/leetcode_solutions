@@ -12,6 +12,6 @@
     {
         "head": [1],
         "pos": -1,
-        "expected": true
+        "expected": false
     }
 ]
