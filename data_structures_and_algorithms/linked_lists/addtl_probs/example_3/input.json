@@ -1,0 +1,17 @@
+[
+    {
+        "head": [1,2,3,4,5],
+        "k": 2,
+        "expected": [true, 4]
+    },
+    {
+        "head": [3,2,0,-4],
+        "k": 1,
+        "expected": [true, -4]
+    },
+    {
+        "head": [1],
+        "k": 1,
+        "expected": [false, -1]
+    }
+]
