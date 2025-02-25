@@ -1,6 +1,6 @@
 import json
 from lib.test import test
-from lib.list import sl_list
+from lib.list import sl_list, ListNode
 
 
 class Solution(object):
@@ -22,7 +22,7 @@ class Solution(object):
 
     """
 
-    def has_cycle(self, head):
+    def has_cycle(self, head: ListNode):
         """
         :type head: ListNode
         :rtype: bool

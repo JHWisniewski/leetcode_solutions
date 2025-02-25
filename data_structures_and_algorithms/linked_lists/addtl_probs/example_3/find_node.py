@@ -1,5 +1,5 @@
 import json
-from lib.test import test
+from lib.test import test_list
 from lib.list import sl_list
 
 
@@ -29,13 +29,13 @@ class Solution(object):
             fast = fast.next
             if fast == None:
                 # Not a decent way to check values without this list return
-                return [False, -1]
+                return None
 
         while fast:
             slow = slow.next
             fast = fast.next
 
-        return [True, slow.val]
+        return slow
 
 
 def main():
@@ -51,7 +51,7 @@ def main():
     for item in data:
         print(f"Input: head = {item['head']}, k = {item['k']}")
         output = solution.find_node(sl_list(item["head"], -1), item["k"])
-        test(output, item["expected"])
+        test_list(output, item["expected"])
 
 
 if __name__ == "__main__":
