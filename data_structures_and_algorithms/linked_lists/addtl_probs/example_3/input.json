@@ -12,6 +12,6 @@
     {
         "head": [1],
         "k": 1,
-        "expected": []
+        "expected": [1]
     }
 ]

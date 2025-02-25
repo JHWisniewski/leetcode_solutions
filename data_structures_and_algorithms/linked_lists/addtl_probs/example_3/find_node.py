@@ -1,6 +1,6 @@
 import json
 from lib.test import test_list
-from lib.list import sl_list
+from lib.list import sl_list, ListNode
 
 
 class Solution(object):
@@ -17,7 +17,7 @@ class Solution(object):
 
     """
 
-    def find_node(self, head, k):
+    def find_node(self, head: ListNode, k):
         """
         :type head: ListNode
         :type k: Int
@@ -26,10 +26,11 @@ class Solution(object):
         slow = head
         fast = head
         for i in range(k):
-            fast = fast.next
+
             if fast == None:
                 # Not a decent way to check values without this list return
                 return None
+            fast = fast.next
 
         while fast:
             slow = slow.next
