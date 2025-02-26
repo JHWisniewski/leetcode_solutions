@@ -21,13 +21,13 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        dummy = head
+        curr = head
 
-        while dummy and dummy.next:
-            if dummy.val == dummy.next.val:
-                dummy.next = dummy.next.next
+        while curr and curr.next:
+            if curr.val == curr.next.val:
+                curr.next = curr.next.next
             else:
-                dummy = dummy.next
+                curr = curr.next
 
         return head
 

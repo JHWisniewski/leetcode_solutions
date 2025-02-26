@@ -16,7 +16,7 @@ class Solution(object):
 
     """
 
-    def check_if_angram(self, sentence):
+    def check_if_pangram(self, sentence):
         """
         :type sentence: str
         :rtype: bool
@@ -39,7 +39,7 @@ def main():
 
     for item in data:
         print(f"Input: sentence = {item['sentence']}")
-        output = solution.check_if_angram(item["sentence"])
+        output = solution.check_if_pangram(item["sentence"])
         test(output, item["expected"])
 
 

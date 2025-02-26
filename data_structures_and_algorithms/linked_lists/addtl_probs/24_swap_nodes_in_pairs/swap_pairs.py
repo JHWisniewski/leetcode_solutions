@@ -21,14 +21,14 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        dummy = head
+        curr = head
         temp = 0
 
-        while dummy and dummy.next:
-            temp = dummy.val
-            dummy.val = dummy.next.val
-            dummy.next.val = temp
-            dummy = dummy.next.next
+        while curr and curr.next:
+            temp = curr.val
+            curr.val = curr.next.val
+            curr.next.val = temp
+            curr = curr.next.next
 
         return head
 
