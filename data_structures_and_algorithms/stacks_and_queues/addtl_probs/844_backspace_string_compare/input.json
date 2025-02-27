@@ -1,0 +1,22 @@
+[
+    {
+        "s": "y#fo##f",
+        "t": "y#f#o##f",
+        "expected": true
+    },
+    {
+        "s": "ab#c",
+        "t": "ad#c",
+        "expected": true
+    },
+    {
+        "s": "ab##",
+        "t": "c#d#",
+        "expected": true
+    },
+    {
+        "s": "a#c",
+        "t": "b",
+        "expected": false
+    }
+]
