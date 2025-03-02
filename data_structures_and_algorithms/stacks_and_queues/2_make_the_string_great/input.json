@@ -1,0 +1,18 @@
+[
+    {
+        "s": "leEeetcode",
+        "expected": "leetcode"
+    },
+    {
+        "s": "abBAcC",
+        "expected": ""
+    },
+    {
+        "s": "s",
+        "expected": "s"
+    },
+    {
+        "s": "kkdsFuqUfSDKK",
+        "expected": "kkdsFuqUfSDKK"
+    }
+]
