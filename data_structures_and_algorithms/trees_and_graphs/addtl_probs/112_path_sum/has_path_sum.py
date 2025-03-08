@@ -6,14 +6,15 @@ from lib.tree import TreeNode, binary_tree
 class Solution(object):
     """
     Description:
-        Write a function that reverses a string. The input string is given as an array of
-        characters s.
+        Given the root of a binary tree and an integer targetSum, return true if the tree has a
+        root-to-leaf path such that adding up all the values along the path equals targetSum.
 
-        You must do this by modifying the input array in-place with O(1) extra memory.
+        A leaf is a node with no children.
 
     Constraints:
-        1 <= s.length <= 10^5
-        s[i] is a printable ascii character.
+        The number of nodes in the tree is in the range [0, 5000].
+        -1000 <= Node.val <= 1000
+        -1000 <= targetSum <= 1000
 
     """
 

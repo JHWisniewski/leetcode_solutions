@@ -6,14 +6,14 @@ from lib.tree import TreeNode, binary_tree
 class Solution(object):
     """
     Description:
-        Write a function that reverses a string. The input string is given as an array of
-        characters s.
+        Given the root of a binary tree, return its maximum depth.
 
-        You must do this by modifying the input array in-place with O(1) extra memory.
+        A binary tree's maximum depth is the number of nodes along the longest path from the root
+        node down to the farthest leaf node.
 
     Constraints:
-        1 <= s.length <= 10^5
-        s[i] is a printable ascii character.
+        The number of nodes in the tree is in the range [0, 10^4].
+        -100 <= Node.val <= 100
 
     """
 
