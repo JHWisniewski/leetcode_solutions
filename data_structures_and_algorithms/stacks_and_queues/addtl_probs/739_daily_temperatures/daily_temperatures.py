@@ -39,8 +39,8 @@ def main():
     solution = Solution()
     path = "./data_structures_and_algorithms/stacks_and_queues/addtl_probs/739_daily_temperatures/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: temperatures = {item['temperatures']}")

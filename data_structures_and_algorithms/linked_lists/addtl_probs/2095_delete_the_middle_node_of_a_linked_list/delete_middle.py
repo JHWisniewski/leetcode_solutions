@@ -47,8 +47,8 @@ def main():
     solution = Solution()
     path = "./data_structures_and_algorithms/linked_lists/addtl_probs/2095_delete_the_middle_node_of_a_linked_list/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: head = {item['head']}")

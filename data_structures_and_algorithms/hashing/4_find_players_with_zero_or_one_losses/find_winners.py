@@ -64,8 +64,8 @@ def main():
     solution = Solution()
     path = "./data_structures_and_algorithms/hashing/4_find_players_with_zero_or_one_losses/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: matches = {item['matches']}")

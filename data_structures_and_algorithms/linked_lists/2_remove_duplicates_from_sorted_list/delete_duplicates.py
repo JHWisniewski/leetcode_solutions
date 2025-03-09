@@ -37,8 +37,8 @@ def main():
     solution = Solution()
     path = "./data_structures_and_algorithms/linked_lists/2_remove_duplicates_from_sorted_list/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: head = {item['head']}")

@@ -18,6 +18,10 @@ class Solution(object):
     """
 
     def max_depth(self, root: TreeNode):
+        """
+        :type root: Optional[TreeNode]
+        :rtype: int
+        """
         if not root:
             return 0
 
@@ -55,8 +59,8 @@ def main():
     solution = Solution()
     path = "./data_structures_and_algorithms/trees_and_graphs/addtl_probs/104_maximum_depth_of_binary_tree/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: root = {item['root']}")

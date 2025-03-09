@@ -34,8 +34,8 @@ def main():
     solution = Solution()
     path = "./data_structures_and_algorithms/hashing/1_check_if_the_sentence_is_pangram/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: sentence = {item['sentence']}")

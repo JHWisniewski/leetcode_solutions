@@ -60,8 +60,8 @@ def main():
     path = "./data_structures_and_algorithms/stacks_and_queues/4_next_greater_element_I/input.json"
     output = [None]
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: nums1 = {item['nums1']}, nums2 = {item['nums2']}")

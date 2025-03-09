@@ -48,8 +48,8 @@ def main():
     path = "./data_structures_and_algorithms/stacks_and_queues/addtl_probs/933_number_of_recent_calls/input.json"
     output = [None]
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         solution = RecentCounter()
