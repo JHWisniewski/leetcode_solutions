@@ -27,8 +27,8 @@ def main():
     solution = Solution()
     path = "./data_structures_and_algorithms/hashing/addtl_probs/217_contains_duplicate/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: nums = {item['nums']}")

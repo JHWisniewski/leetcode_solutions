@@ -1,0 +1,10 @@
+[
+    {
+        "s": "abbaca",
+        "expected": "ca"
+    },
+    {
+        "s": "azxxzy",
+        "expected": "ay"
+    }
+]

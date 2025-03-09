@@ -60,10 +60,10 @@ class Solution(object):
 def main():
     # Setup of solution with LeetCode example input
     solution = Solution()
-    path = "./data_structures_and_algorithms/arrays_and_strings/6_minimum_calue_to_get_positive_step_by_step_sum/input.json"
+    path = "./data_structures_and_algorithms/arrays_and_strings/6_minimum_value_to_get_positive_step_by_step_sum/input.json"
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: nums = {item['nums']}")

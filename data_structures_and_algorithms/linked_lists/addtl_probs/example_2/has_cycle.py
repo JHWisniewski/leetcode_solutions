@@ -1,6 +1,6 @@
 import json
 from lib.test import test
-from lib.list import sl_list
+from lib.list import sl_list, ListNode
 
 
 class Solution(object):
@@ -22,7 +22,7 @@ class Solution(object):
 
     """
 
-    def has_cycle(self, head):
+    def has_cycle(self, head: ListNode):
         """
         :type head: ListNode
         :rtype: bool
@@ -47,8 +47,8 @@ def main():
         "./data_structures_and_algorithms/linked_lists/addtl_probs/example_2/input.json"
     )
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: head = {item['head']}, pos = {item['pos']}")

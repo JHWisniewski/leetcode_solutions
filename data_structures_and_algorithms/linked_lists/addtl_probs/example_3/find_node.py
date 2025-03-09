@@ -1,6 +1,6 @@
 import json
-from lib.test import test
-from lib.list import sl_list
+from lib.test import test_list
+from lib.list import sl_list, ListNode
 
 
 class Solution(object):
@@ -17,7 +17,7 @@ class Solution(object):
 
     """
 
-    def find_node(self, head, k):
+    def find_node(self, head: ListNode, k):
         """
         :type head: ListNode
         :type k: Int
@@ -26,16 +26,17 @@ class Solution(object):
         slow = head
         fast = head
         for i in range(k):
-            fast = fast.next
+
             if fast == None:
                 # Not a decent way to check values without this list return
-                return [False, -1]
+                return None
+            fast = fast.next
 
         while fast:
             slow = slow.next
             fast = fast.next
 
-        return [True, slow.val]
+        return slow
 
 
 def main():
@@ -45,13 +46,13 @@ def main():
         "./data_structures_and_algorithms/linked_lists/addtl_probs/example_3/input.json"
     )
 
-    with open(path, encoding="utf-8") as f:
-        data = json.loads(f.read())
+    with open(path, encoding="utf-8") as file:
+        data = json.load(file)
 
     for item in data:
         print(f"Input: head = {item['head']}, k = {item['k']}")
         output = solution.find_node(sl_list(item["head"], -1), item["k"])
-        test(output, item["expected"])
+        test_list(output, item["expected"])
 
 
 if __name__ == "__main__":

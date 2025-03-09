@@ -18,12 +18,11 @@ def sl_list(nums, pos):
         if i == pos:
             target = dummy
 
-        dummy.val = num
+        dummy.next = ListNode(num)
 
         if i == len(nums) - 1:
-            dummy.next = target
+            dummy.next.next = target
         else:
-            dummy.next = ListNode(None)
             dummy = dummy.next
 
-    return head
+    return head.next
