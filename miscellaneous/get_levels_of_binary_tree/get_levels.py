@@ -6,7 +6,7 @@ from lib.tree import TreeNode, binary_tree
 class Solution(object):
     """ """
 
-    def print_levels(self, root: TreeNode):
+    def get_levels(self, root: TreeNode):
         """
         :type root: Optional[TreeNode]
         :rtype: list(list[Int])
@@ -44,7 +44,7 @@ def main():
 
     for item in data:
         print(f"Input: root = {item['root']}")
-        output = solution.print_levels(binary_tree(item["root"]))
+        output = solution.get_levels(binary_tree(item["root"]))
         test(output, item["expected"])
 
 
