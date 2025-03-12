@@ -18,14 +18,14 @@ def binary_tree(nums):
     i = 1
 
     while i < len(nums):
-        node = queue.popleft()  # Process the current node
+        node = queue.popleft()
 
-        if i < len(nums) and nums[i] is not None:  # Left child
+        if i < len(nums) and nums[i] is not None:
             node.left = TreeNode(nums[i])
             queue.append(node.left)
         i += 1
 
-        if i < len(nums) and nums[i] is not None:  # Right child
+        if i < len(nums) and nums[i] is not None:
             node.right = TreeNode(nums[i])
             queue.append(node.right)
         i += 1
