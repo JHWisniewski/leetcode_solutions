@@ -27,9 +27,7 @@ class Solution(object):
 def main():
     # Setup of solution with LeetCode example input
     solution = Solution()
-    path = (
-        "./data_structures_and_algorithms/miscellaneous/70_climbing_stairs/input.json"
-    )
+    path = "./miscellaneous/70_climbing_stairs/input.json"
 
     with open(path, encoding="utf-8") as file:
         data = json.load(file)
