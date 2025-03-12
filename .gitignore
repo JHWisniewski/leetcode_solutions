@@ -172,4 +172,4 @@ cython_debug/
 .vscode/
 
 # Rewrites of code
-*copy.py
+*copy*.py
