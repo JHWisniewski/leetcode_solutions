@@ -39,6 +39,7 @@ class Solution(object):
             return max(left_path, right_path) + 1
 
         longest_path(root)
+
         return diameter
 
 

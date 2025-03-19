@@ -22,35 +22,35 @@ class Solution(object):
 
     """
 
-    def two_sum(self, numbers, target):
+    def can_jump(self, nums):
         """
-        :type numbers: List[int]
-        :type target: int
-        :rtype: List[int]
+        :type nums: List[int]
+        :rtype: bool
         """
-        left = 0
-        right = len(numbers) - 1
+        stack = [nums[0]]
+        index = 0
 
-        while left < right:
-            if numbers[left] + numbers[right] == target:
-                return [left + 1, right + 1]
-            elif numbers[left] + numbers[right] < target:
-                left += 1
+        while stack:
+            if index + stack[-1] >= len(nums) - 1:
+                return True
             else:
-                right -= 1
+                stack.append(nums[index + stack.pop()])
+                index += 1
+
+        return False
 
 
 def main():
     # Setup of solution with LeetCode example input
     solution = Solution()
-    path = "./miscellaneous/167_two_sum_II_input_array_is_sorted/input.json"
+    path = "./miscellaneous/jump_game/input.json"
 
     with open(path, encoding="utf-8") as file:
         data = json.load(file)
 
     for item in data:
-        print(f"Input: numbers = {item['numbers']}, target = {item['target']}")
-        output = solution.two_sum(item["numbers"], item["target"])
+        print(f"Input: nums = {item['nums']}")
+        output = solution.can_jump(item["nums"])
         test(output, item["expected"])
 
 
