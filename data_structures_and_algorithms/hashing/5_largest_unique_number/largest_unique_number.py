@@ -41,7 +41,7 @@ class Solution(object):
 def main():
     # Setup of solution with LeetCode example input
     solution = Solution()
-    path = "./data_structures_and_algorithms/hashing/5_largets_unique_number/input.json"
+    path = "./data_structures_and_algorithms/hashing/5_largest_unique_number/input.json"
 
     with open(path, encoding="utf-8") as file:
         data = json.load(file)

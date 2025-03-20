@@ -11,3 +11,13 @@ def reverse_string(s: list) -> list:
         right -= 1
 
     return s
+
+
+def sum_digits(n: int) -> int:
+    x = 0
+
+    while n > 0:
+        x += n % 10
+        n //= 10
+
+    return x
