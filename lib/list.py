@@ -6,10 +6,6 @@ class ListNode(object):
 
 # Build singly-linked list given list of 'nums' and cycle index 'pos'
 def sl_list(nums: list, pos: int) -> ListNode:
-    """
-    :type nums: list
-    :rtype: ListNode
-    """
     head = ListNode(None)
     dummy = head
     target = None
@@ -29,10 +25,6 @@ def sl_list(nums: list, pos: int) -> ListNode:
 
 
 def extract_list(head: ListNode) -> list[int]:
-    """
-    :type head: ListNode
-    :rtype: list
-    """
     ans = []
 
     while head:

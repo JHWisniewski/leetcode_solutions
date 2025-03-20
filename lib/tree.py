@@ -1,7 +1,6 @@
 from collections import deque, Counter
 
 
-# Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -34,10 +33,6 @@ def binary_tree(nums: list) -> TreeNode:
 
 
 def bfs_list(root: TreeNode) -> list[list[int]]:
-    """
-    :type root: Optional[TreeNode]
-    :rtype: int
-    """
     from collections import deque
 
     if not root:
