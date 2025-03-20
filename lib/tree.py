@@ -1,4 +1,4 @@
-from collections import deque
+from collections import deque, Counter
 
 
 # Definition for a binary tree node.
@@ -9,7 +9,7 @@ class TreeNode(object):
         self.right = right
 
 
-def binary_tree(nums):
+def binary_tree(nums: list) -> TreeNode:
     if not nums or nums[0] is None:
         return None
 
@@ -31,3 +31,55 @@ def binary_tree(nums):
         i += 1
 
     return root
+
+
+def bfs_list(root: TreeNode) -> list[list[int]]:
+    """
+    :type root: Optional[TreeNode]
+    :rtype: int
+    """
+    from collections import deque
+
+    if not root:
+        return 0
+
+    queue = deque([root])
+    levels = []
+
+    while queue:
+        lvl_length = len(queue)
+        temp = []
+
+        for _ in range(lvl_length):
+            node = queue.popleft()
+
+            if not node:
+                temp.append(None)
+            else:
+                temp.append(node.val)
+                queue.append(node.left)
+                queue.append(node.right)
+
+        levels.append(temp)
+
+    return levels
+
+
+def pop_trailing_nones(vals: list) -> list[int]:
+    while not vals[-1]:
+        vals.pop()
+
+    return vals
+
+
+def extract_actual_level_vals(root: TreeNode) -> list[int]:
+    levels = bfs_list(root)
+    vals = []
+
+    for i, level in enumerate(levels):
+        if i == 0 or len(Counter(level)) != 1:
+            vals += level
+
+    vals = pop_trailing_nones(vals)
+
+    return vals

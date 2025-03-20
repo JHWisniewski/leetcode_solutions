@@ -1,11 +1,11 @@
 class ListNode(object):
-    def __init__(self, x):
+    def __init__(self, x: int):
         self.val = x
         self.next = None
 
 
 # Build singly-linked list given list of 'nums' and cycle index 'pos'
-def sl_list(nums, pos):
+def sl_list(nums: list, pos: int) -> ListNode:
     """
     :type nums: list
     :rtype: ListNode
@@ -26,3 +26,17 @@ def sl_list(nums, pos):
             dummy = dummy.next
 
     return head.next
+
+
+def extract_list(head: ListNode) -> list[int]:
+    """
+    :type head: ListNode
+    :rtype: list
+    """
+    ans = []
+
+    while head:
+        ans.append(head.val)
+        head = head.next
+
+    return ans

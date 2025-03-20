@@ -1,4 +1,4 @@
-def my_module():
+def my_module() -> None:
     """
     :type: Void
     :rtype: Void

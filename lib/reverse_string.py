@@ -1,4 +1,4 @@
-def reverse_string(s):
+def reverse_string(s: list) -> list:
     """
     :type s: List[str]
     :rtype: None Do not return anything, modify s in-place instead.

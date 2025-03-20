@@ -1,4 +1,4 @@
-def sum_digits(n):
+def sum_digits(n: int) -> int:
     """
     :type n: int
     :rtype: int
