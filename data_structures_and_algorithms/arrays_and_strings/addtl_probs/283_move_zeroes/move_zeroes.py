@@ -5,14 +5,15 @@ from lib.test import test
 class Solution(object):
     """
     Description:
-        Given an integer array nums, move all 0's to the end of it while maintaining the relative
-        order of the non-zero elements.
+        Given an array of positive integers nums and a positive integer target, return the minimal length of a
+        subarray whose sum is greater than or equal to target.
 
-        Note that you must do this in-place without making a copy of the array.
+        If there is no such subarray, return 0 instead.
 
     Constraints:
-        1 <= nums.length <= 10^4
-        -2^31 <= nums[i] <= 2^31 - 1
+        1 <= target <= 10^9
+        1 <= nums.length <= 10^5
+        1 <= nums[i] <= 10^4
 
     """
 
