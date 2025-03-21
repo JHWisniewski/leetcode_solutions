@@ -47,6 +47,7 @@ class Solution(object):
         for i in range(len(nums)):
             left = i - k
             right = i + k
+
             if left < 0 or right >= len(nums):
                 ans.append(-1)
             else:

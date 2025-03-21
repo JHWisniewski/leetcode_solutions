@@ -1,5 +1,5 @@
 import json
-from lib.sum_digits import sum_digits
+from lib.misc import sum_digits
 from lib.test import test
 
 

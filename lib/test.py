@@ -1,22 +1,7 @@
-def extract_list(head):
-    """
-    :type head: ListNode
-    :rtype: list
-    """
-    ans = []
-
-    while head:
-        ans.append(head.val)
-        head = head.next
-
-    return ans
+from lib.list import ListNode, extract_list
 
 
-def test(output, expected):
-    """
-    :type output: Any
-    :rtype: Void
-    """
+def test(output, expected) -> None:
     print(f"Output: {output}")
     print(f"Expected Output: {expected}")
 
@@ -27,12 +12,7 @@ def test(output, expected):
     print()
 
 
-def test_list(l_list, expected):
-    """
-    :type l_list: ListNode
-    :type expected: list
-    :rtype: Void
-    """
+def test_list(l_list: ListNode, expected: list) -> None:
     output = extract_list(l_list)
     print(f"Output: {output}")
     print(f"Expected Output: {expected}")

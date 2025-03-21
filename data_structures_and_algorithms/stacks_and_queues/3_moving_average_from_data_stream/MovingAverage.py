@@ -55,13 +55,11 @@ def main():
         data = json.load(file)
 
     for item in data:
-        print(f"Input: operations = {item['operations']}")
+        print(f"Input:\n{item['functions']}\n{item['parameters']}")
+        solution = MovingAverage(item["parameters"][0][0])
 
-        for i, o in enumerate(item["operations"][0]):
-            if o == "MovingAverage":
-                solution = MovingAverage(item["operations"][1][0][0])
-            else:
-                output.append(solution.next(item["operations"][1][i][0]))
+        for i in range(1, len(item["parameters"])):
+            output.append(solution.next(item["parameters"][i][0]))
 
         test(output, item["expected"])
 

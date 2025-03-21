@@ -1,6 +1,2 @@
-def my_module():
-    """
-    :type: Void
-    :rtype: Void
-    """
+def my_module() -> None:
     print("Hello world!")

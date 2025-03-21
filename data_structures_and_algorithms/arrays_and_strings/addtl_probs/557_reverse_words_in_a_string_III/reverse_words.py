@@ -1,5 +1,5 @@
 import json
-from lib.reverse_string import reverse_string
+from lib.misc import reverse_string
 from lib.test import test
 
 

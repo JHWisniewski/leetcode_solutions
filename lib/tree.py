@@ -1,7 +1,6 @@
-from collections import deque
+from collections import deque, Counter
 
 
-# Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -9,7 +8,7 @@ class TreeNode(object):
         self.right = right
 
 
-def binary_tree(nums):
+def binary_tree(nums: list) -> TreeNode:
     if not nums or nums[0] is None:
         return None
 
@@ -18,16 +17,64 @@ def binary_tree(nums):
     i = 1
 
     while i < len(nums):
-        node = queue.popleft()  # Process the current node
+        node = queue.popleft()
 
-        if i < len(nums) and nums[i] is not None:  # Left child
+        if i < len(nums) and nums[i] is not None:
             node.left = TreeNode(nums[i])
             queue.append(node.left)
         i += 1
 
-        if i < len(nums) and nums[i] is not None:  # Right child
+        if i < len(nums) and nums[i] is not None:
             node.right = TreeNode(nums[i])
             queue.append(node.right)
         i += 1
 
     return root
+
+
+def bfs_list(root: TreeNode) -> list[list[int]]:
+    from collections import deque
+
+    if not root:
+        return 0
+
+    queue = deque([root])
+    levels = []
+
+    while queue:
+        lvl_length = len(queue)
+        temp = []
+
+        for _ in range(lvl_length):
+            node = queue.popleft()
+
+            if not node:
+                temp.append(None)
+            else:
+                temp.append(node.val)
+                queue.append(node.left)
+                queue.append(node.right)
+
+        levels.append(temp)
+
+    return levels
+
+
+def pop_trailing_nones(vals: list) -> list[int]:
+    while not vals[-1]:
+        vals.pop()
+
+    return vals
+
+
+def extract_actual_level_vals(root: TreeNode) -> list[int]:
+    levels = bfs_list(root)
+    vals = []
+
+    for i, level in enumerate(levels):
+        if i == 0 or len(Counter(level)) != 1:
+            vals += level
+
+    vals = pop_trailing_nones(vals)
+
+    return vals
