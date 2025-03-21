@@ -6,7 +6,7 @@ from lib.list import sl_list, ListNode
 class Solution(object):
     """
     Description:
-        Reverse a given dingly linked list.
+        Reverse a given singly-linked list.
 
     Constraints:
         None

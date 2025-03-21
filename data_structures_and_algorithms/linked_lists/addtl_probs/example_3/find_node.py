@@ -25,7 +25,8 @@ class Solution(object):
         """
         slow = head
         fast = head
-        for i in range(k):
+
+        for _ in range(k):
 
             if fast == None:
                 # Not a decent way to check values without this list return
